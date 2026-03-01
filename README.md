@@ -177,11 +177,13 @@ Consume processed messages:
 ```powershell
 docker exec -it broker sh -c "/opt/kafka/bin/kafka-console-consumer.sh --topic orders.processed --from-beginning --bootstrap-server broker:29092"
 ```
+<img width="1387" height="67" alt="image" src="https://github.com/user-attachments/assets/a7bab819-5568-41e7-b00c-490ab1f8e85d" />
 
 Consume DLQ messages:
 ```powershell
 docker exec -it broker sh -c "/opt/kafka/bin/kafka-console-consumer.sh --topic orders.dlq --from-beginning --bootstrap-server broker:29092"
 ```
+<img width="1393" height="86" alt="image" src="https://github.com/user-attachments/assets/d38b44ff-7e6e-4495-8ee6-f5e47b8b395b" />
 
 ---
 
