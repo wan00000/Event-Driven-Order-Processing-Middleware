@@ -113,7 +113,7 @@ WAR outputs:
 - `api-service/target/api-service.war`
 - `processor-service/target/processor-service.war`
 - `dlq-admin/target/dlq-admin.war`
-<img width="1198" height="393" alt="image" src="https://github.com/user-attachments/assets/23584694-c9e4-402c-9223-65caa0d41c47" />
+<img width="1182" height="395" alt="image" src="https://github.com/user-attachments/assets/a6ada8c8-685a-40a7-b23f-d20422b5c284" />
 
 ### 4) Start WildFly
 ```powershell
