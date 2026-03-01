@@ -87,6 +87,7 @@ From the repo root:
 cd infra
 docker compose up -d
 ```
+<img width="1432" height="86" alt="image" src="https://github.com/user-attachments/assets/912aee43-5fab-4567-b2a2-23985cfe79fc" />
 
 Kafka UI:
 - http://localhost:8085
@@ -99,17 +100,20 @@ docker exec -it broker sh -c "/opt/kafka/bin/kafka-topics.sh --create --topic or
 docker exec -it broker sh -c "/opt/kafka/bin/kafka-topics.sh --create --topic orders.processed --partitions 3 --replication-factor 1 --bootstrap-server broker:29092"
 docker exec -it broker sh -c "/opt/kafka/bin/kafka-topics.sh --create --topic orders.dlq --partitions 1 --replication-factor 1 --bootstrap-server broker:29092"
 ```
+<img width="1645" height="482" alt="image" src="https://github.com/user-attachments/assets/97cb0cfa-5acf-446d-bf10-92c06596b78c" />
 
 ### 3) Build the project
 From repo root:
 ```powershell
 mvn clean package
 ```
+<img width="748" height="309" alt="image" src="https://github.com/user-attachments/assets/45f143a8-f312-44bb-9cb9-169b5e93e7b8" />
 
 WAR outputs:
 - `api-service/target/api-service.war`
 - `processor-service/target/processor-service.war`
 - `dlq-admin/target/dlq-admin.war`
+<img width="1198" height="393" alt="image" src="https://github.com/user-attachments/assets/23584694-c9e4-402c-9223-65caa0d41c47" />
 
 ### 4) Start WildFly
 ```powershell
@@ -124,6 +128,8 @@ C:\path\to\wildfly-39.x\standalone\deployments\
 ```
 
 After deployment, you should see “Deployed …” messages in the WildFly console.
+<img width="1919" height="970" alt="image" src="https://github.com/user-attachments/assets/1b2db5b4-4830-4fee-8df3-997bd8d2f960" />
+<img width="1920" height="967" alt="image" src="https://github.com/user-attachments/assets/7e770d78-b324-46fb-a0fa-5d03f578607b" />
 
 ---
 
@@ -138,6 +144,8 @@ curl.exe -X POST "http://localhost:8080/api-service/api/orders" `
 
 Expected:
 - A message appears in `orders.processed`
+<img width="1667" height="680" alt="image" src="https://github.com/user-attachments/assets/2a90eefd-c46d-4b65-86d9-ddb89c38ef93" />
+
 
 ### 2) Send a failing order (goes to DLQ after retries)
 ```powershell
@@ -148,7 +156,9 @@ curl.exe -X POST "http://localhost:8080/api-service/api/orders" `
 
 Expected:
 - After processing retries, the message lands in `orders.dlq`
+<img width="1656" height="732" alt="image" src="https://github.com/user-attachments/assets/facc4d38-ec34-4e00-b8b9-f824f14e3929" />
 - DLQ UI will show it
+<img width="1917" height="401" alt="image" src="https://github.com/user-attachments/assets/063bb402-e12d-4252-bb46-22e4af19807c" />
 
 ### 3) View DLQ UI
 Open:
