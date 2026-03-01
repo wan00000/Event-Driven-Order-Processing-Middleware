@@ -1,0 +1,2 @@
+<!-- processor-service/src/main/webapp/WEB-INF/beans.xml -->
+<beans xmlns="https://jakarta.ee/xml/ns/jakartaee" bean-discovery-mode="annotated"/>

@@ -1,0 +1,2 @@
+com\acme\api\JaxrsApp.class
+com\acme\api\rest\OrdersResource.class

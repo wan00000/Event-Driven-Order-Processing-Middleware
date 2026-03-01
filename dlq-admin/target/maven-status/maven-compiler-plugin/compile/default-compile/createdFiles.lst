@@ -1,0 +1,5 @@
+com\acme\dlq\rest\DlqResource.class
+com\acme\dlq\store\DlqStore$DlqItem.class
+com\acme\dlq\messaging\DlqConsumer.class
+com\acme\dlq\store\DlqStore.class
+com\acme\dlq\JaxrsApp.class

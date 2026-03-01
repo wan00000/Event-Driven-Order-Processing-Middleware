@@ -1,0 +1,2 @@
+com\acme\processor\messaging\OrderConsumer.class
+com\acme\processor\service\OrderProcessor.class

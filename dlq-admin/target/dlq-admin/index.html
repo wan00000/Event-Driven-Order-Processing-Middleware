@@ -1,0 +1,22 @@
+<!-- dlq-admin/src/main/webapp/index.html -->
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>DLQ Admin</title>
+</head>
+<body>
+  <h2>Orders DLQ</h2>
+  <button onclick="load()">Refresh</button>
+  <pre id="out">Loading...</pre>
+
+  <script>
+    async function load() {
+      const res = await fetch('./api/dlq');
+      const data = await res.json();
+      document.getElementById('out').textContent = JSON.stringify(data, null, 2);
+    }
+    load();
+  </script>
+</body>
+</html>

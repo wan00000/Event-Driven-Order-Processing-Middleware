@@ -1,0 +1,4 @@
+com\acme\common\model\OrderProcessed.class
+com\acme\common\util\JsonUtil.class
+com\acme\common\model\OrderRequest.class
+com\acme\common\model\OrderCreated.class
