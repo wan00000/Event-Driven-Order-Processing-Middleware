@@ -1,4 +1,4 @@
-# Event-Driven Middleware for Order Processing (Kafka + WildFly + MicroProfile)
+# Event-Driven Order Processing Middleware (Kafka + WildFly + MicroProfile)
 
 A reference implementation of an **event-driven pipeline** for order processing. It shows how to decouple services using Kafka while maintaining **operational resilience** through **retries, Dead Letter Queue (DLQ) handling, and clear runbook-driven troubleshooting**.
 
